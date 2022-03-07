@@ -29,6 +29,7 @@ import java.util.Optional;
 
 import com.google.common.base.Preconditions;
 
+import net.kyori.adventure.text.Component;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.inventory.InventoryCloseEvent;
@@ -39,7 +40,7 @@ import org.bukkit.inventory.Inventory;
 public class SmartInventory {
 
     private String id;
-    private String title;
+    private Component title;
     private InventoryType type;
     private int rows, columns;
     private boolean closeable;
@@ -120,7 +121,7 @@ public class SmartInventory {
     }
 
     public String getId() { return id; }
-    public String getTitle() { return title; }
+    public Component getTitle() { return title; }
     public InventoryType getType() { return type; }
     public int getRows() { return rows; }
     public int getColumns() { return columns; }
@@ -142,7 +143,7 @@ public class SmartInventory {
     public static final class Builder {
 
         private String id = "unknown";
-        private String title = "";
+        private Component title = Component.empty();
         private InventoryType type = InventoryType.CHEST;
         private Optional<Integer> rows = Optional.empty();
         private Optional<Integer> columns = Optional.empty();
@@ -162,7 +163,7 @@ public class SmartInventory {
             return this;
         }
 
-        public Builder title(String title) {
+        public Builder title(Component title) {
             this.title = title;
             return this;
         }
@@ -219,7 +220,7 @@ public class SmartInventory {
             return id;
         }
 
-        public String getTitle() {
+        public Component getTitle() {
             return title;
         }
 
