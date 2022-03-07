@@ -3,6 +3,7 @@ package fr.minuskube.inv;
 import fr.minuskube.inv.content.InventoryContents;
 import fr.minuskube.inv.content.InventoryProvider;
 import fr.minuskube.inv.opener.InventoryOpener;
+import net.kyori.adventure.text.Component;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.inventory.InventoryCloseEvent;
@@ -17,7 +18,8 @@ import java.util.Optional;
 public class SmartInventory {
 
     private String id;
-    private String title;
+    private Component title;
+
     private InventoryType type;
     private int rows, columns;
     private boolean closeable;
@@ -85,7 +87,9 @@ public class SmartInventory {
     }
 
     public String getId() { return id; }
-    public String getTitle() { return title; }
+
+    public Component getTitle() { return title; }
+
     public InventoryType getType() { return type; }
     public int getRows() { return rows; }
     public int getColumns() { return columns; }
@@ -105,7 +109,7 @@ public class SmartInventory {
     public static final class Builder {
 
         private String id = "unknown";
-        private String title = "";
+        private Component title = Component.empty();
         private InventoryType type = InventoryType.CHEST;
         private int rows = 6, columns = 9;
         private boolean closeable = true;
@@ -123,7 +127,7 @@ public class SmartInventory {
             return this;
         }
 
-        public Builder title(String title) {
+        public Builder title(Component title) {
             this.title = title;
             return this;
         }
