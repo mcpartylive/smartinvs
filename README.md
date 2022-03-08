@@ -29,7 +29,7 @@ Advanced Inventory API for your Minecraft Bukkit plugins.
 1. Firstly, add SmartInvs to your Gradle buildsystem as such:
 ```
 dependencies {
-    compileOnly("live.mcparty:smart-invs:1.3.1")
+    compileOnly("live.mcparty:smart-invs:1.3.3")
 }
 ```
 
