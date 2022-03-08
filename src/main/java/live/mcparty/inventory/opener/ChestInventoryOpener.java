@@ -1,8 +1,8 @@
-package fr.minuskube.inv.opener;
+package live.mcparty.inventory.opener;
 
 import com.google.common.base.Preconditions;
-import fr.minuskube.inv.InventoryManager;
-import fr.minuskube.inv.SmartInventory;
+import live.mcparty.inventory.InventoryManager;
+import live.mcparty.inventory.SmartInventory;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;

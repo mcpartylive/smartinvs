@@ -1,7 +1,7 @@
-package fr.minuskube.inv.content;
+package live.mcparty.inventory.content;
 
-import fr.minuskube.inv.ClickableItem;
-import fr.minuskube.inv.SmartInventory;
+import live.mcparty.inventory.ClickableItem;
+import live.mcparty.inventory.SmartInventory;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;

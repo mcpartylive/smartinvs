@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "live.mcparty"
-version = "1.3.0"
+version = "1.3.2"
 
 repositories {
     maven("https://papermc.io/repo/repository/maven-public/")
@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-    api("io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT")
 }
 
 publishing {

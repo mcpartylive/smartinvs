@@ -1,9 +1,9 @@
-package fr.minuskube.inv;
+package live.mcparty.inventory;
 
-import fr.minuskube.inv.content.InventoryContents;
-import fr.minuskube.inv.opener.ChestInventoryOpener;
-import fr.minuskube.inv.opener.InventoryOpener;
-import fr.minuskube.inv.opener.SpecialInventoryOpener;
+import live.mcparty.inventory.content.InventoryContents;
+import live.mcparty.inventory.opener.ChestInventoryOpener;
+import live.mcparty.inventory.opener.InventoryOpener;
+import live.mcparty.inventory.opener.SpecialInventoryOpener;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

@@ -1,8 +1,8 @@
-package fr.minuskube.inv;
+package live.mcparty.inventory;
 
-import fr.minuskube.inv.content.InventoryContents;
-import fr.minuskube.inv.content.InventoryProvider;
-import fr.minuskube.inv.opener.InventoryOpener;
+import live.mcparty.inventory.content.InventoryContents;
+import live.mcparty.inventory.content.InventoryProvider;
+import live.mcparty.inventory.opener.InventoryOpener;
 import net.kyori.adventure.text.Component;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;

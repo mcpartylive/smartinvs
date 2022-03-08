@@ -1,4 +1,4 @@
-package fr.minuskube.inv;
+package live.mcparty.inventory;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

@@ -1,4 +1,4 @@
-package fr.minuskube.inv.content;
+package live.mcparty.inventory.content;
 
 import org.bukkit.entity.Player;
 

@@ -1,4 +1,4 @@
-package fr.minuskube.inv;
+package live.mcparty.inventory;
 
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;

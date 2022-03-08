@@ -1,4 +1,4 @@
-package fr.minuskube.inv;
+package live.mcparty.inventory;
 
 import java.util.function.Consumer;
 

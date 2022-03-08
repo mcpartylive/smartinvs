@@ -1,6 +1,6 @@
-package fr.minuskube.inv.content;
+package live.mcparty.inventory.content;
 
-import fr.minuskube.inv.ClickableItem;
+import live.mcparty.inventory.ClickableItem;
 
 import java.util.Arrays;
 
