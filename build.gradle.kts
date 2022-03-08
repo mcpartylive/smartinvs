@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "live.mcparty"
-version = "1.3.3"
+version = "1.3.4"
 
 repositories {
     maven("https://papermc.io/repo/repository/maven-public/")

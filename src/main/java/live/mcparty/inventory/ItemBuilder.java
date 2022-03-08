@@ -90,8 +90,6 @@ public class ItemBuilder {
         return itemStack;
     }
 
-
-
-    record ItemEnchant(Enchantment enchantment, int level) {}
+    public record ItemEnchant(Enchantment enchantment, int level) {}
 
 }
