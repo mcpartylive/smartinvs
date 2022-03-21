@@ -24,7 +24,6 @@ public class MinestomSmartInventory extends SmartInventory<Inventory, Player, Mi
 
     @Override
     public Inventory open(Player player, int page) {
-        System.out.println("we are OPENING");
         Optional<MinestomSmartInventory> oldInv = this.getManager().getInventory(player);
 
         oldInv.ifPresent(inv -> {
@@ -34,11 +33,9 @@ public class MinestomSmartInventory extends SmartInventory<Inventory, Player, Mi
         MinestomInventoryContents contents = new MinestomInventoryContents(this, player.getUuid());
         contents.pagination().page(page);
 
-        System.out.println(2);
         this.getManager().setContents(player, contents);
 
         try {
-            System.out.println(3);
             this.getProvider().init(player, contents);
 
             // If the current inventory has been closed or replaced within the init method, returns
@@ -46,11 +43,9 @@ public class MinestomSmartInventory extends SmartInventory<Inventory, Player, Mi
 //                return null;
 //            }
 
-            System.out.println(4);
-            Inventory handle = (Inventory) new ChestInventoryOpener().open(this, player);
+            Inventory handle = new ChestInventoryOpener().open(this, player);
 
             this.getManager().setInventory(player, this);
-
             return handle;
         } catch (Exception e) {
             this.getManager().handleInventoryOpenError(this, player, e);

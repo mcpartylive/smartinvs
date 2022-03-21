@@ -1,11 +1,13 @@
 package live.mcparty.inventory.opener;
 
+import live.mcparty.inventory.ClickableItem;
 import live.mcparty.inventory.MinestomInventoryManager;
 import live.mcparty.inventory.SmartInventory;
 import live.mcparty.inventory.content.InventoryContents;
 import net.minestom.server.entity.Player;
 import net.minestom.server.inventory.Inventory;
 import net.minestom.server.inventory.InventoryType;
+import net.minestom.server.item.ItemStack;
 
 public class ChestInventoryOpener implements InventoryOpener<Inventory, Player, InventoryType> {
 
@@ -35,7 +37,14 @@ public class ChestInventoryOpener implements InventoryOpener<Inventory, Player, 
 
     @Override
     public void fill(Inventory handle, InventoryContents contents) {
+        ClickableItem[][] items = contents.all();
 
+        for(int row = 0; row < items.length; row++) {
+            for(int column = 0; column < items[row].length; column++) {
+                if(items[row][column] != null)
+                    handle.setItemStack(9 * row + column, (ItemStack) items[row][column].getItem());
+            }
+        }
     }
 
 }
