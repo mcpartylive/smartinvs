@@ -25,7 +25,6 @@ public class ChestInventoryOpener implements InventoryOpener<Inventory, Player, 
 
         fill(handle, manager.getContents(player).get());
 
-        player.sendMessage("beep boop");
         player.openInventory(handle);
         return handle;
     }
@@ -41,8 +40,18 @@ public class ChestInventoryOpener implements InventoryOpener<Inventory, Player, 
 
         for(int row = 0; row < items.length; row++) {
             for(int column = 0; column < items[row].length; column++) {
-                if(items[row][column] != null)
+                if(items[row][column] != null) {
                     handle.setItemStack(9 * row + column, (ItemStack) items[row][column].getItem());
+                    int finalRow = row;
+                    int finalColumn = column;
+                    handle.addInventoryCondition(((player, slot, clickType, inventoryConditionResult) -> {
+                        if (slot == 9 * finalRow + finalColumn) {
+                            inventoryConditionResult.setCancel(true);
+                            items[finalRow][finalColumn].run();
+                        }
+
+                    }));
+                }
             }
         }
     }

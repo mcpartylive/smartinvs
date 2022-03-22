@@ -3,7 +3,9 @@ package live.mcparty.inventory;
 import live.mcparty.inventory.opener.ChestInventoryOpener;
 import live.mcparty.inventory.opener.InventoryOpener;
 import lombok.Getter;
+import net.minestom.server.MinecraftServer;
 import net.minestom.server.entity.Player;
+import net.minestom.server.event.inventory.InventoryClickEvent;
 import net.minestom.server.inventory.InventoryType;
 
 import java.util.*;

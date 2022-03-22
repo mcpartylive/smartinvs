@@ -5,14 +5,17 @@ import java.util.function.Consumer;
 public class ClickableItem<I, E> {
 
     private I item;
-    private Consumer<E> consumer;
+    private Runnable consumer;
 
-    public ClickableItem(I item, Consumer<E> consumer) {
+    public ClickableItem(I item, Runnable consumer) {
         this.item = item;
         this.consumer = consumer;
     }
 
-    public void run(E e) { consumer.accept(e); }
+    public void run() {
+        if (consumer != null)
+            consumer.run();
+    }
 
     public I getItem() { return item; }
 

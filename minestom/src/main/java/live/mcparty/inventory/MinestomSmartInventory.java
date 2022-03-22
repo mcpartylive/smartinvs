@@ -7,16 +7,22 @@ import lombok.Getter;
 import lombok.Setter;
 import net.kyori.adventure.text.Component;
 import net.minestom.server.entity.Player;
+import net.minestom.server.event.Event;
+import net.minestom.server.event.ListenerHandle;
 import net.minestom.server.event.inventory.InventoryCloseEvent;
+import net.minestom.server.event.trait.InventoryEvent;
 import net.minestom.server.inventory.Inventory;
 import net.minestom.server.inventory.InventoryType;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Getter
 @Setter
 public class MinestomSmartInventory extends SmartInventory<Inventory, Player, MinestomInventoryManager> {
     private InventoryType type;
+    private List<InventoryEvent> listeners;
 
     public MinestomSmartInventory(MinestomInventoryManager manager) {
         super(manager);
@@ -72,6 +78,7 @@ public class MinestomSmartInventory extends SmartInventory<Inventory, Player, Mi
 
         private MinestomInventoryManager manager;
         private SmartInventory parent;
+        private List<InventoryEvent> listeners = new ArrayList<>();
 
         private Builder() {}
 
@@ -111,6 +118,11 @@ public class MinestomSmartInventory extends SmartInventory<Inventory, Player, Mi
             return this;
         }
 
+        public Builder listener(InventoryEvent event) {
+            this.listeners.add(event);
+            return this;
+        }
+
         public Builder manager(MinestomInventoryManager manager) {
             this.manager = manager;
             return this;
@@ -132,6 +144,7 @@ public class MinestomSmartInventory extends SmartInventory<Inventory, Player, Mi
             inv.closeable = this.closeable;
             inv.parent = this.parent;
             inv.provider = this.provider;
+            inv.listeners = this.listeners;
 
             return inv;
         }

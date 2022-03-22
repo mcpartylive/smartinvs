@@ -167,7 +167,7 @@ public class PaperInventoryManager {
                     .filter(listener -> listener.getType() == InventoryClickEvent.class)
                     .forEach(listener -> ((InventoryListener<InventoryClickEvent>) listener).accept(e));
 
-                contents.get(p.getUniqueId()).get(row, column).ifPresent(item -> item.run(e));
+                contents.get(p.getUniqueId()).get(row, column).ifPresent(item -> item.run());
 
                 p.updateInventory();
             }

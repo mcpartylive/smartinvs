@@ -8,21 +8,21 @@ import java.util.function.Consumer;
 public class PaperClickableItem extends ClickableItem<ItemStack, InventoryClickEvent> {
 
     private ItemStack item;
-    private Consumer<InventoryClickEvent> consumer;
+    private Runnable consumer;
 
-    private PaperClickableItem(ItemStack item, Consumer<InventoryClickEvent> consumer) {
+    private PaperClickableItem(ItemStack item, Runnable consumer) {
         super(item, consumer);
     }
 
     public static PaperClickableItem empty(ItemStack item) {
-        return of(item, e -> {});
+        return of(item, null);
     }
 
-    public static PaperClickableItem of(ItemStack item, Consumer<InventoryClickEvent> consumer) {
+    public static PaperClickableItem of(ItemStack item, Runnable consumer) {
         return new PaperClickableItem(item, consumer);
     }
 
-    public void run(InventoryClickEvent e) { consumer.accept(e); }
+    public void run() { consumer.run(); }
 
     public ItemStack getItem() { return item; }
 

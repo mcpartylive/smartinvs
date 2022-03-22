@@ -7,7 +7,7 @@ import net.minestom.server.item.ItemStack;
 import java.util.function.Consumer;
 
 public class MinestomClickableItem extends ClickableItem<ItemStack, InventoryClickEvent> {
-    public MinestomClickableItem(ItemStack item, Consumer<InventoryClickEvent> consumer) {
-        super(item, consumer);
+    public MinestomClickableItem(ItemStack item, Runnable runnable) {
+        super(item, runnable);
     }
 }
