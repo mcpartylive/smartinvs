@@ -1,6 +1,7 @@
 plugins {
     id("maven-publish")
     id("java-library")
+    id("com.github.johnrengelman.shadow") version "7.0.0"
 }
 
 group = "live.mcparty"
