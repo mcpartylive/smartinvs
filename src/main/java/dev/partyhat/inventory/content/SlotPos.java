@@ -1,4 +1,4 @@
-package live.mcparty.inventory.content;
+package dev.partyhat.inventory.content;
 
 public class SlotPos {
 

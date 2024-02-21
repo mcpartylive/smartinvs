@@ -4,4 +4,4 @@ description: Inventory API for your Bukkit Plugins.
 authors: [MinusKube, 'Partyhat.gg']
 api-version: 1.20
 website: https://github.com/partyhatgg/SmartInvs
-main: live.mcparty.inventory.SmartInvsPlugin
+main: dev.partyhat.inventory.SmartInvsPlugin

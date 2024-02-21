@@ -1,8 +1,8 @@
-package live.mcparty.inventory;
+package dev.partyhat.inventory;
 
-import live.mcparty.inventory.content.InventoryContents;
-import live.mcparty.inventory.content.InventoryProvider;
-import live.mcparty.inventory.opener.InventoryOpener;
+import dev.partyhat.inventory.opener.InventoryOpener;
+import dev.partyhat.inventory.content.InventoryContents;
+import dev.partyhat.inventory.content.InventoryProvider;
 import net.kyori.adventure.text.Component;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;

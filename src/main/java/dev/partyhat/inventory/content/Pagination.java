@@ -1,6 +1,6 @@
-package live.mcparty.inventory.content;
+package dev.partyhat.inventory.content;
 
-import live.mcparty.inventory.ClickableItem;
+import dev.partyhat.inventory.ClickableItem;
 
 import java.util.Arrays;
 

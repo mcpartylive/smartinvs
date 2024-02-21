@@ -1,9 +1,9 @@
-package live.mcparty.inventory;
+package dev.partyhat.inventory;
 
-import live.mcparty.inventory.content.InventoryContents;
-import live.mcparty.inventory.opener.ChestInventoryOpener;
-import live.mcparty.inventory.opener.InventoryOpener;
-import live.mcparty.inventory.opener.SpecialInventoryOpener;
+import dev.partyhat.inventory.opener.ChestInventoryOpener;
+import dev.partyhat.inventory.opener.InventoryOpener;
+import dev.partyhat.inventory.opener.SpecialInventoryOpener;
+import dev.partyhat.inventory.content.InventoryContents;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

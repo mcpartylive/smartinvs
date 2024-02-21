@@ -1,4 +1,4 @@
-package live.mcparty.inventory;
+package dev.partyhat.inventory;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

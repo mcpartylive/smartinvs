@@ -1,8 +1,8 @@
-package live.mcparty.inventory.opener;
+package dev.partyhat.inventory.opener;
 
-import live.mcparty.inventory.ClickableItem;
-import live.mcparty.inventory.SmartInventory;
-import live.mcparty.inventory.content.InventoryContents;
+import dev.partyhat.inventory.ClickableItem;
+import dev.partyhat.inventory.SmartInventory;
+import dev.partyhat.inventory.content.InventoryContents;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;

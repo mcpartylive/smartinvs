@@ -1,4 +1,4 @@
-package live.mcparty.inventory;
+package dev.partyhat.inventory;
 
 import java.util.function.Consumer;
 

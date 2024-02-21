@@ -1,4 +1,4 @@
-package live.mcparty.inventory;
+package dev.partyhat.inventory;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextDecoration;

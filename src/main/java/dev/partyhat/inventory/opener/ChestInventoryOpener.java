@@ -1,8 +1,8 @@
-package live.mcparty.inventory.opener;
+package dev.partyhat.inventory.opener;
 
 import com.google.common.base.Preconditions;
-import live.mcparty.inventory.InventoryManager;
-import live.mcparty.inventory.SmartInventory;
+import dev.partyhat.inventory.InventoryManager;
+import dev.partyhat.inventory.SmartInventory;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;

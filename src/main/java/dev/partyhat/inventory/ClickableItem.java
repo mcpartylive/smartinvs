@@ -1,4 +1,4 @@
-package live.mcparty.inventory;
+package dev.partyhat.inventory;
 
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
