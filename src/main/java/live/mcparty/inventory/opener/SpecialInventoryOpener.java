@@ -13,15 +13,27 @@ import java.util.List;
 public class SpecialInventoryOpener implements InventoryOpener {
 
     private static final List<InventoryType> SUPPORTED = ImmutableList.of(
-            InventoryType.FURNACE,
-            InventoryType.WORKBENCH,
             InventoryType.DISPENSER,
             InventoryType.DROPPER,
+            InventoryType.FURNACE,
+            InventoryType.WORKBENCH,
+            // Crafting
             InventoryType.ENCHANTING,
             InventoryType.BREWING,
+            // Player
+            // Creative
+            // Merchant
             InventoryType.ANVIL,
+            // Smithing
             InventoryType.BEACON,
-            InventoryType.HOPPER
+            InventoryType.HOPPER,
+            InventoryType.BLAST_FURNACE,
+            // Lectern
+            InventoryType.SMOKER
+            // Loom
+            // Cartography
+            // Grindstone
+            // Stonecutter
     );
 
     @Override

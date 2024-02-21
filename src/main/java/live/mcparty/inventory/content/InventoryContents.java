@@ -110,8 +110,9 @@ public interface InventoryContents {
         public Optional<SlotPos> firstEmpty() {
             for (int row = 0; row < contents.length; row++) {
                 for(int column = 0; column < contents[0].length; column++) {
-                    if(!this.get(row, column).isPresent())
+                    if(this.get(row, column).isEmpty()) {
                         return Optional.of(new SlotPos(row, column));
+                    }
                 }
             }
 

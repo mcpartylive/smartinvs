@@ -9,6 +9,7 @@ import org.bukkit.event.Event;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -168,9 +169,11 @@ public class SmartInventory {
             return this;
         }
 
-        public SmartInventory build() {
-            if(this.provider == null)
+        @NotNull
+        private SmartInventory getSmartInventory() {
+            if(this.provider == null) {
                 throw new IllegalStateException("The provider of the SmartInventory.Builder must be set.");
+            }
 
             InventoryManager manager = this.manager != null ? this.manager : SmartInvsPlugin.manager();
 
@@ -178,7 +181,11 @@ public class SmartInventory {
                 throw new IllegalStateException("The manager of the SmartInventory.Builder must be set, "
                         + "or the SmartInvs should be loaded as a plugin.");
 
-            SmartInventory inv = new SmartInventory(manager);
+            return new SmartInventory(manager);
+        }
+
+        public SmartInventory build() {
+            SmartInventory inv = getSmartInventory();
             inv.id = this.id;
             inv.title = this.title;
             inv.type = this.type;

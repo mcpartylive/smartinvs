@@ -7,6 +7,11 @@ import java.util.function.Consumer;
 
 public class ClickableItem {
 
+    /**
+     * ClickableItem constant with no item and empty consumer.
+     */
+    public static final ClickableItem NONE = empty(null);
+
     private ItemStack item;
     private Consumer<InventoryClickEvent> consumer;
 

@@ -199,7 +199,7 @@ public interface SlotIterator {
         }
 
         private boolean canPlace() {
-            return !blacklisted.contains(SlotPos.of(row, column)) && (allowOverride || !this.get().isPresent());
+            return !blacklisted.contains(SlotPos.of(row, column)) && (allowOverride || this.get().isEmpty());
         }
 
     }
